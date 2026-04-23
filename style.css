@@ -1092,6 +1092,97 @@ input:focus, textarea:focus {
   transform: translateY(0);
   transition: 1s ease;
 }
+/* ===== FOOTER (MATCH YOUR THEME) ===== */
+.footer {
+  margin-top: 80px;
+  padding: 50px 10% 20px;
+  background: rgba(13, 18, 27, 0.6);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* LEFT */
+.footer-name {
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #00f2fe, #bc4eeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-role {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.footer-tag {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* LINKS */
+.footer-links a,
+.footer-social a {
+  display: block;
+  text-decoration: none;
+  color: #a0a0a0;
+  margin: 6px 0;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #00f2fe;
+  transform: translateX(4px);
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Force same size container */
+.social-icons a {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Force same icon size */
+.social-icons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  color: #94a3b8;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.social-icons a:hover i {
+  color: #22d3ee;
+  transform: translateY(-2px);
+}
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 12px;
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
