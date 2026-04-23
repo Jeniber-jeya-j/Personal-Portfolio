@@ -276,6 +276,15 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+.about-btn-github {
+  border: 1px solid #bc4eeb;
+  color: #fff;
+}
+
+.about-btn-github:hover {
+  background: #bc4eeb;
+  color: #000;
+}
 
 /* Skills Section */
 .skills-section {
@@ -464,6 +473,36 @@ body {
   margin-right: 12px; 
   font-size: 1.2rem; 
 }
+.experience-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.exp-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00f2fe, #bc4eeb);
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.exp-btn i {
+  margin-right: 6px;
+}
+
+.exp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+}
+
+.exp-btn.outline {
+  background: transparent;
+  border: 1px solid #00f2fe;
+}
 
 /* Projects Section */
 
@@ -520,6 +559,41 @@ body {
     align-items: center;
     gap: 6px;
     margin-top: auto;
+}
+
+.project-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-btn {
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00f2fe, #bc4eeb);
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.project-btn i {
+  margin-right: 5px;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+}
+
+.project-btn.outline {
+  background: transparent;
+  border: 1px solid #00f2fe;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
 }
 
 .tech-label {
@@ -779,9 +853,19 @@ body {
 }
 .contact-actions {
   display: flex;
-  justify-content: space-between; /* opposite sides */
   align-items: center;
-  margin-top: 20px;
+  justify-content: space-between; /* pushes send button right */
+}
+
+.contact-actions a {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Group icons tightly */
+.contact-actions .icon-group {
+  display: flex;
+  gap: 8px; /* control icon spacing */
 }
 
 /* LinkedIn button */
