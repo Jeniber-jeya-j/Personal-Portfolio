@@ -42,35 +42,54 @@ const skillObserver = new IntersectionObserver(
 skillObserver.observe(skillSection);
 
 
-// CONTACT FORM SUBMIT
-const contactForm = document.getElementById("contactForm");
+// CONTACT FORM SUBMIT (Formspree + success message)
+const contactForm = document.querySelector("form");
+const successMsg = document.getElementById("successMsg");
 
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault(); // stop page reload
+contactForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  const data = new FormData(contactForm);
 
-  // Basic validation
-  if (!name || !email || !message) {
-    alert("Please fill all fields");
-    return;
-  }
+  const response = await fetch(contactForm.action, {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
 
-  // Simulate sending data (for frontend portfolio)
-  console.log("Name:", name);
-  console.log("Email:", email);
-  console.log("Message:", message);
+if (response.ok) {
+  const overlay = document.getElementById("overlay");
+  const successMsg = document.getElementById("successMsg");
 
-  alert("Message sent successfully!");
+  overlay.style.display = "block";
+  successMsg.style.display = "block";
 
-  // Clear form
+  setTimeout(() => {
+    successMsg.classList.add("show");
+  }, 50);
+
   contactForm.reset();
 
-  // Move to HOME section
-  document.querySelector("#home").scrollIntoView({
-    behavior: "smooth"
-  });
+  // Auto hide after 3 sec
+  setTimeout(() => {
+    successMsg.classList.remove("show");
+
+    setTimeout(() => {
+      overlay.style.display = "none";
+      successMsg.style.display = "none";
+
+      // go to home
+      document.querySelector("#home").scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }, 400);
+
+  }, 3000);
+} else {
+    alert("Something went wrong. Try again.");
+  }
 });
 

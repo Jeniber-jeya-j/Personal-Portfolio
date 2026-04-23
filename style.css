@@ -31,6 +31,10 @@ body {
   padding: 12px 30px;
   border-radius: 40px;
   z-index: 100;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .nav-links a {
@@ -736,11 +740,15 @@ body {
 
 .cert-view-btn {
   margin-top: auto;
-  padding: 8px 22px;
+  align-self: center;
+  padding: 8px 16px;
+  display: inline-block;   
+  width: fit-content;
   border-radius: 30px;
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: 600;
+  text-align: center;
   border: 1px solid var(--accent-cyan);
   color: var(--accent-cyan);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -1056,7 +1064,7 @@ input:focus, textarea:focus {
 }
 
 .btn {
-  padding: 12px 25px;
+  padding: 12px 40px;
   border-radius: 25px;
   text-decoration: none;
   transition: 0.3s;
@@ -1091,6 +1099,48 @@ input:focus, textarea:focus {
   opacity: 1;
   transform: translateY(0);
   transition: 1s ease;
+}
+
+/* Background blur overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+/* Popup box */
+.success-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  z-index: 1000;
+
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 1px solid #00f5d4;
+  background: rgba(10,10,10,0.9);
+  color: #00f5d4;
+  text-align: center;
+
+  box-shadow: 0 0 20px rgba(0,245,212,0.4);
+  transition: all 0.4s ease;
+}
+
+.success-box.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.success-box.hide {
+  opacity: 0;
 }
 /* ===== FOOTER (MATCH YOUR THEME) ===== */
 .footer {
