@@ -20,6 +20,24 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.project-status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #00f2fe, #bc4eeb);
+  font-weight: 500;
+  width: fit-content;
+}
+
 /* NAVBAR */
 .glass-nav {
   position: fixed;
