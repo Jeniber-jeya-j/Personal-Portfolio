@@ -8,44 +8,48 @@ I'm Jeniber Jeya J, a Computer Science Engineering student and Full Stack Develo
 
 ## Features✨ 
 
-Modern and Responsive UI Design
-Interactive Hero Section
-About Me Section
-Technical Skills Showcase
-Professional Experience
-Internship Experience
-Project Portfolio
-Contact Section
-Smooth Animations and Transitions
-Mobile-Friendly Layout
+Modern and Responsive UI Design | 
+Interactive Hero Section | 
+About Me Section | 
+Technical Skills Showcase | 
+Professional Experience | 
+Internship Experience | 
+Project Portfolio | 
+Contact Section | 
+Smooth Animations and Transitions | 
+Mobile-Friendly Layout |
 
 ## Technologies🛠️
 
-Frontend
-HTML5
-CSS3
-JavaScript
-React.js
-React Native
-Backend
-Python
-Java
-FastAPI
-REST API Integration
-Database
-SQL
+### Frontend 
+HTML5 | 
+CSS3 | 
+JavaScript | 
+React.js | 
+React Native 
+
+### Backend
+Python | 
+Java | 
+FastAPI | 
+REST API Integration 
+
+### Database
+SQL | 
 MySQL
-Development Tools
-Git & GitHub
-VS Code
-Postman
-Vercel
-Render
-AI Tools
-ChatGPT
-Claude
-GitHub Copilot
-Prompt Engineering
+
+### Development Tools
+Git & GitHub | 
+VS Code | 
+Postman | 
+Vercel | 
+Render 
+
+### AI Tools
+ChatGPT  | 
+Claude | 
+GitHub Copilot | 
+Prompt Engineering 
 
 ## Experience💼 
 
